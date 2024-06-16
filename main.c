@@ -6,7 +6,7 @@
 /*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 14:10:13 by pyathams          #+#    #+#             */
-/*   Updated: 2024/06/16 17:53:11 by pyathams         ###   ########.fr       */
+/*   Updated: 2024/06/16 18:34:48 by pyathams         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,16 @@ int	main(int argc, char **argv)
 		while (++z < map->w)
 		{
 			ft_printf("%d ", map->zdir_mt[i][z]);
+		}
+		ft_printf("\n");
+	}
+	i = -1;
+	while (++i < map->h)
+	{
+		z = -1;
+		while (++z < map->w)
+		{
+			ft_printf("%d ", map->clrs[i][z]);
 		}
 		ft_printf("\n");
 	}
