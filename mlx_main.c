@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   other_utilis.c                                     :+:      :+:    :+:   */
+/*   mlx_main.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/16 15:21:32 by pyathams          #+#    #+#             */
-/*   Updated: 2024/06/18 15:06:28 by pyathams         ###   ########.fr       */
+/*   Created: 2024/06/18 15:11:38 by pyathams          #+#    #+#             */
+/*   Updated: 2024/06/18 18:48:53 by pyathams         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
-void	free_split(char **split)
+int	mlx_main(t_map	*map)
 {
-	int	i;
+	t_vars	*vars;
 
-	i = 0;
-	while (split[i])
+	vars = (t_vars *)malloc(sizeof(t_vars));
+	if (!vars)
+		error_exit();
+	if (initialise_vars(vars, map))
 	{
-		free(split[i]);
-		i++;
+		free_all(vars);
+		error_exit();
 	}
-	free(split);
+	initialise_mlx(vars);
+	mlx_hook(vars->window, 2, 1L << 0, key_hook, vars);
+	mlx_hook(vars->window, 2, 1L << 17, key_hook, vars);
+	draw(vars);
 }

@@ -6,7 +6,7 @@
 /*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 14:42:48 by pyathams          #+#    #+#             */
-/*   Updated: 2024/06/16 17:47:29 by pyathams         ###   ########.fr       */
+/*   Updated: 2024/06/18 15:02:02 by pyathams         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	get_min_max_z(t_map *map)
 	int	y;
 
 	y = -1;
+	map->max_z = INT_MIN;
+	map->min_z = INT_MAX;
 	while (++y < map->h)
 	{
 		x = -1;
