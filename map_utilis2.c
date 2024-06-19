@@ -6,7 +6,7 @@
 /*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 16:14:36 by pyathams          #+#    #+#             */
-/*   Updated: 2024/06/16 17:48:40 by pyathams         ###   ########.fr       */
+/*   Updated: 2024/06/19 20:41:15 by pyathams         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,6 @@ void	zdir_map(t_map *map, char *file)
 		free_map(map);
 		perror_exit(file);
 	}
-	filling_zdir(map,fd);
+	filling_zdir(map, fd);
 	close(fd);
 }

@@ -6,7 +6,7 @@
 /*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 15:11:38 by pyathams          #+#    #+#             */
-/*   Updated: 2024/06/18 18:48:53 by pyathams         ###   ########.fr       */
+/*   Updated: 2024/06/19 18:04:57 by pyathams         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,9 @@ int	mlx_main(t_map	*map)
 	}
 	initialise_mlx(vars);
 	mlx_hook(vars->window, 2, 1L << 0, key_hook, vars);
-	mlx_hook(vars->window, 2, 1L << 17, key_hook, vars);
+	mlx_hook(vars->window, 17, 1L << 17, key_hook, vars);
 	draw(vars);
+	mlx_loop(vars->mlx_connection);
+	free_all(vars);
+	return (0);
 }

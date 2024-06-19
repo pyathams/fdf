@@ -6,7 +6,7 @@
 /*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 17:27:05 by pyathams          #+#    #+#             */
-/*   Updated: 2024/06/18 18:08:28 by pyathams         ###   ########.fr       */
+/*   Updated: 2024/06/19 19:00:39 by pyathams         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ int	key_hook(int keycode, t_vars *vars)
 	if (keycode == KEY_R)
 		reset_vars(vars);
 	if (keycode == KEY_W || keycode == KEY_S
-		|| keycode == KEY_A || keycode == KEY_D)
+		|| keycode == KEY_A || keycode == KEY_D
+		|| keycode == KEY_LEFT || keycode == KEY_RIGHT)
 		handle_move(keycode, vars);
 	if (keycode == KEY_UP || keycode == KEY_DOWN)
 		handle_zoom(keycode, vars);
@@ -27,7 +28,7 @@ int	key_hook(int keycode, t_vars *vars)
 		|| keycode == KEY_U || keycode == KEY_O || keycode == KEY_L)
 		handle_rot(keycode, vars);
 	if (keycode == KEY_MINUS || keycode == KEY_PLUS)
-		handle_flattering(keycode, vars);
+		handle_flattening(keycode, vars);
 	if (keycode == KEY_P)
 	{
 		if (vars-> iso)

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   key_functions.c                                    :+:      :+:    :+:   */
+/*   keycodes_functions.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 18:39:58 by pyathams          #+#    #+#             */
-/*   Updated: 2024/06/18 18:45:33 by pyathams         ###   ########.fr       */
+/*   Updated: 2024/06/19 20:14:11 by pyathams         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	close_win(t_vars *vars)
 {
 	free_all(vars);
 	exit(EXIT_SUCCESS);
-	return (0);
+	return ;
 }
 
 void	handle_zoom(int	keycode, t_vars *vars)
@@ -39,9 +39,9 @@ void	handle_move(int keycode, t_vars *vars)
 		vars->shift_y += SHIFT;
 	if (keycode == KEY_S)
 		vars->shift_y -= SHIFT;
-	if (keycode == KEY_A)
+	if (keycode == KEY_A || keycode == KEY_RIGHT)
 		vars->shift_x += SHIFT;
-	if (keycode == KEY_D)
+	if (keycode == KEY_D || keycode == KEY_LEFT)
 		vars->shift_x -= SHIFT;
 }
 

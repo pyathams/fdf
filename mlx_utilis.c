@@ -6,7 +6,7 @@
 /*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 15:28:02 by pyathams          #+#    #+#             */
-/*   Updated: 2024/06/18 17:11:41 by pyathams         ###   ########.fr       */
+/*   Updated: 2024/06/19 19:59:44 by pyathams         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ int	ft_max(int a, int b)
 
 void	reset_vars(t_vars *vars)
 {
-	vars->shift_x = WIN_W / 2;
-	vars->shift_y = WIN_H / 2;
 	vars->zoom = ft_max((WIN_W / vars->map->w / 2), (WIN_H / vars->map->h / 2));
+	vars->shift_x = WIN_W / 2;
+	vars->shift_y = WIN_H / 6;
 	vars->iso = 1;
 	vars->flat = 1;
 	vars->rot_x = 0;
