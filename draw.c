@@ -6,29 +6,11 @@
 /*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 18:49:04 by pyathams          #+#    #+#             */
-/*   Updated: 2024/06/19 20:45:16 by pyathams         ###   ########.fr       */
+/*   Updated: 2024/06/20 15:08:53 by pyathams         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
-
-void	draw_rectangle(t_vars *vars, int width, int height)
-{
-	int	i;
-	int	j;
-
-	i = 0;
-	while (i < height)
-	{
-		j = 0;
-		while (j < width)
-		{
-			img_pixel_put(vars, j, i, 0xFFAA00);
-			j++;
-		}
-		i++;
-	}
-}
 
 void	draw_menu(t_vars *vars)
 {

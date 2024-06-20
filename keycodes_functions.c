@@ -6,7 +6,7 @@
 /*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 18:39:58 by pyathams          #+#    #+#             */
-/*   Updated: 2024/06/19 20:14:11 by pyathams         ###   ########.fr       */
+/*   Updated: 2024/06/20 15:08:27 by pyathams         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	close_win(t_vars *vars)
 	return ;
 }
 
-void	handle_zoom(int	keycode, t_vars *vars)
+void	handle_zoom(int keycode, t_vars *vars)
 {
 	if (keycode == KEY_DOWN)
 	{
@@ -28,7 +28,7 @@ void	handle_zoom(int	keycode, t_vars *vars)
 	}
 	if (keycode == KEY_UP)
 	{
-		if (vars->zoom < INT_MAX)
+		if (vars->zoom < (float)INT_MAX)
 			vars->zoom += ZOOM_SHIFT;
 	}
 }

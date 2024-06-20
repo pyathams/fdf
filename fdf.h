@@ -6,7 +6,7 @@
 /*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 14:10:33 by pyathams          #+#    #+#             */
-/*   Updated: 2024/06/19 18:57:35 by pyathams         ###   ########.fr       */
+/*   Updated: 2024/06/20 15:10:15 by pyathams         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -179,9 +179,10 @@ t_point	get_coords(t_vars *vars, t_point point);
 void	free_all(t_vars *vars);
 void	free_vars(t_vars *vars);
 void	close_win(t_vars *vars);
-void	handle_zoom(int	keycode, t_vars *vars);
+void	handle_zoom(int keycode, t_vars *vars);
 void	handle_move(int keycode, t_vars *vars);
 void	handle_flattening(int keycode, t_vars *vars);
 void	handle_rot(int keycode, t_vars *vars);
+void	draw_rectangle(t_vars *vars, int width, int height);
 
 #endif

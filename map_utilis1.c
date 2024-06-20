@@ -6,7 +6,7 @@
 /*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 14:42:48 by pyathams          #+#    #+#             */
-/*   Updated: 2024/06/19 12:25:32 by pyathams         ###   ########.fr       */
+/*   Updated: 2024/06/20 14:59:21 by pyathams         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,7 +117,7 @@ t_map	*width_height_map(char *file)
 	t_map	*map;
 	char	*line;
 
-	map = (t_map *)malloc(sizeof(t_map));
+	map = (t_map *)calloc(1 , sizeof(t_map));
 	if (!map)
 		return (NULL);
 	fd = open(file, O_RDONLY);

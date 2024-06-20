@@ -6,7 +6,7 @@
 /*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 15:21:32 by pyathams          #+#    #+#             */
-/*   Updated: 2024/06/19 20:53:30 by pyathams         ###   ########.fr       */
+/*   Updated: 2024/06/20 15:20:55 by pyathams         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void	free_vars(t_vars *vars)
 		free_map(vars->map);
 	if (vars->img)
 		free(vars->img);
+	free(vars->mlx_connection);
 	free(vars);
 }
 

@@ -6,7 +6,7 @@
 /*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 14:30:47 by pyathams          #+#    #+#             */
-/*   Updated: 2024/06/16 15:48:10 by pyathams         ###   ########.fr       */
+/*   Updated: 2024/06/20 15:09:23 by pyathams         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,22 @@ void	perror_exit(const char *str)
 {
 	perror(str);
 	exit(EXIT_FAILURE);
+}
+
+void	draw_rectangle(t_vars *vars, int width, int height)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (i < height)
+	{
+		j = 0;
+		while (j < width)
+		{
+			img_pixel_put(vars, j, i, 0xFFAA00);
+			j++;
+		}
+		i++;
+	}
 }
